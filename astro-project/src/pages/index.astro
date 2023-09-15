@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Web Developer • WordPress Expert • PHP • CSS • JavaScript / JonathanFinnegan.com">
+	<main>
+		<h1>Jonathan Finnegan <span style="font-size: 50%;" class="text-gradient">(dot com)</span></h1>
+		<h2>Most people call me '<span class="text-gradient">Finn</span>'.</h2>
+		<p class="leadin">
+			And yes I know this is just the basic Astro template. <code>It's a work in progress</code>.
+			<br>
+			<em>In the meantime</em>, below is a little bit about me...
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://linkedin.com/in/finnfinnegan/"
+				title="LinkedIn"
+				body="Check out my LinkedIn profile for my work history."
+			/>
+			<Card
+				href="https://github.com/haveboard/"
+				title="GitHub"
+				body="Here's a link to my GitHub profile, although I typical have been using private repositories not on github. Code samples available upon request."
+			/>
+			<Card
+				href="https://haveboard.com/"
+				title="haveboard.com"
+				body="I used to maintain a skateboarding website called haveboard.com."
+			/>
+			<Card
+				href="https://djhaveboard.com"
+				title="djhaveboard.com"
+				body="I'm also a DJ! I have a website for that too."
+			/>
+			<Card
+				href="/resume/"
+				title="Resume"
+				body="Want to take a look at my resume?"
+			/>
+			<Card
+				href="/contact/"
+				title="Contact Me"
+				body="I'm actively looking for my next role. I'm open to full-time, contract, and freelance opportunities."
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.leadin {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.leadin code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.leadin strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
